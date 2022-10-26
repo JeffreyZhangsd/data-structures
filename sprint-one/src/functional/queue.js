@@ -18,6 +18,7 @@ var Queue = function() {
     //should dequeue from earliest index
     //looking at first key
     var firstQueue = storage[first]
+    delete storage[first];
     first++;
     return firstQueue;
   };
