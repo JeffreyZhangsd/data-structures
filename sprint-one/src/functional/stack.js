@@ -19,7 +19,9 @@ var Stack = function() {
   someInstance.pop = function() {
     //should remove most recent value from end of object
     i--;
-    return storage[i];
+    var popped = storage[i];
+    delete storage[i];
+    return popped;
   };
 
   someInstance.size = function() {
